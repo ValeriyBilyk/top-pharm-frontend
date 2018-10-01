@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Helvetica;
+}
+
+.tp-form-register-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tp-form-register {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 20px;
+
+
+  input {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 12px 45px 12px 10px;
+    line-height: 19px;
+    font-size: 16px;
+    transition: border-color .3s;
+    background-color: #fff;
+    outline: none;
+    margin-top: 20px;
+  }
+}
+
+.tp-form-register-header {
+  display: flex;
+  justify-content: center;
+}
+
+.tp-input-submit {
+  background-color: #50B819 !important;
+  color: #fff !important;
+}

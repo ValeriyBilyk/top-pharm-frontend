@@ -1,0 +1,33 @@
+.tp-header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 64px;
+  color: #fff;
+  background-color: rgb(244, 67, 54);
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 5px 0px;
+  text-transform: uppercase;
+}
+
+.tp-header-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: underline;
+}
+
+.tp-header-item {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  &:hover {
+    background-color: rgb(211, 47, 47);
+    cursor: pointer;
+  }
+}
+
+.tp-header-left {
+  display: flex;
+}
