@@ -31,3 +31,26 @@
 .tp-header-left {
   display: flex;
 }
+
+.tp-shopping-cart {
+  font-size: 30px;
+  padding-right: 30px;
+}
+
+.tp-circle-icon {
+  position: absolute;
+  color: #50B819;
+  font-size: 22px;
+  right: -14px;
+}
+
+.tp-shopping-cart-block {
+  position: relative;
+}
+
+.tp-shopping-cart-label {
+  position: absolute;
+  font-size: 12px;
+  right: -8px;
+  top: 2px;
+}

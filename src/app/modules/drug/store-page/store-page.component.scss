@@ -1,0 +1,29 @@
+.tp-users-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  color: rgb(77, 77, 77);
+}
+
+.tp-table-action {
+  font-size: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tp-list-item {
+
+  font-size: 0.9rem;
+  color: rgb(77, 77, 77);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  //&:hover {
+  //  transition-property: box-shadow;
+  //  transition-duration: 0.3s;
+  //  transition-timing-function: ease-in-out;
+  //  transition-delay: 0s;
+  //  box-shadow: 0 0 10px 1px #ccc;
+  //}
+}

@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: Helvetica;
+  font-family: Helvetica !important;
 }
 
 .tp-form-register-wrapper {
@@ -42,5 +42,14 @@ body {
 
 .tp-input-submit {
   background-color: #50B819 !important;
+  border: 1px solid #50B819;
   color: #fff !important;
+}
+
+.tp-input-btn {
+  border-radius: 2px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  outline: none !important;
 }

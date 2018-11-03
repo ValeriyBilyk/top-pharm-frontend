@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DrugService } from '../../modules/drug/drug.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private drugService: DrugService) { }
 
   ngOnInit() {
+  }
+
+  navigateToDrugs() {
+    this.router.navigate(['/drugs'])
+  }
+
+  navigateToUsers() {
+    this.router.navigate(['/users'])
+  }
+
+  navigateToOrders() {
+    this.router.navigate(['/orders'])
+  }
+
+  navigateToStore() {
+    this.router.navigate(['/store'])
+  }
+
+  getSelectedDrugsAmount() {
+
+   return this.drugService.selectedDrugsIds && this.drugService.selectedDrugsIds.length;
   }
 
 }

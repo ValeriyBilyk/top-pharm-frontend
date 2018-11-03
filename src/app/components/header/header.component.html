@@ -1,9 +1,19 @@
 <div class="tp-header">
   <div class="tp-header-left">
     <div class="tp-header-logo">Top Pharm</div>
-    <div class="tp-header-item">Drugs</div>
-    <div class="tp-header-item">Users</div>
-    <div class="tp-header-item">Orders</div>
+    <div class="tp-header-item" (click)="navigateToDrugs()">Drugs</div>
+    <div class="tp-header-item" (click)="navigateToUsers()">Users</div>
+    <div class="tp-header-item" (click)="navigateToOrders()">Orders</div>
+    <div class="tp-header-item" (click)="navigateToStore()">Store</div>
   </div>
-  <div class="tp-header-item">Log in</div>
+  <div class="d-flex">
+    <div class="d-flex align-items-center tp-shopping-cart tp-header-item">
+      <div class="tp-shopping-cart-block">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <i class="fa fa-circle tp-circle-icon" aria-hidden="true"></i>
+        <span class="tp-shopping-cart-label">{{getSelectedDrugsAmount()}}</span>
+      </div>
+    </div>
+    <div class="tp-header-item">Log in</div>
+  </div>
 </div>

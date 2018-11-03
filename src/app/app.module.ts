@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DrugModule } from './modules/drug/drug.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { UserModule } from './modules/user/user.module';
+import { OrderModule } from './modules/order/order.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,11 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     DrugModule,
-    AuthModule
+    AuthModule,
+    UserModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
