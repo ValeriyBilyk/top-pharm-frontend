@@ -10,6 +10,8 @@ import {UserPageComponent} from './modules/user/user-page/user-page.component';
 import {OrdersPageComponent} from './modules/order/orders-page/orders-page.component';
 import {DrugsFormPageComponent} from './modules/drug/drugs-form-page/drugs-form-page.component';
 import {StorePageComponent} from './modules/drug/store-page/store-page.component';
+import {OrderFormPageComponent} from './modules/order/order-form-page/order-form-page.component';
+import {HistoryPageComponent} from './modules/history/history-page/history-page.component';
 
 const appRoutes: Routes = [
   {
@@ -25,8 +27,10 @@ const appRoutes: Routes = [
       {path: 'drugs', component: DrugsPageComponent},
       {path: 'users', component: UserPageComponent},
       {path: 'orders', component: OrdersPageComponent},
+      {path: 'drugAction-form', component: OrderFormPageComponent},
       {path: 'drugs-form', component: DrugsFormPageComponent},
-      {path: 'store', component: StorePageComponent}
+      {path: 'store', component: StorePageComponent},
+      {path: 'history', component: HistoryPageComponent}
     ]
   },
   {path: 'account/register', component: RegisterPageComponent},

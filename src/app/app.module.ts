@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,6 +11,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { UserModule } from './modules/user/user.module';
 import { OrderModule } from './modules/order/order.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HistoryModule } from './modules/history/history.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     DrugModule,
     AuthModule,
     UserModule,
-    OrderModule
+    OrderModule,
+    HistoryModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

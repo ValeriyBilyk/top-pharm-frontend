@@ -1,0 +1,14 @@
+<div class="tp-form-register-wrapper">
+  <form class="tp-form-register" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h2 class="d-flex justify-content-center mt-4">Order form</h2>
+    <div formArrayName="purchases">
+      <div class="d-flex" *ngFor="let purchase of purchases.controls; let i=index">
+        <div class="d-flex tp-purchase-item align-items-center justify-content-between w-100 mt-3" [formGroup]="purchase">
+          <div>{{getValue(purchase, 'name')}}</div>
+          <input type="number" placeholder="Amount" formControlName="value">
+        </div>
+      </div>
+    </div>
+    <input class="tp-input-submit" type="submit" value="Apply">
+  </form>
+</div>

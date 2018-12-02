@@ -4,10 +4,13 @@ import { DrugsPageComponent } from './drugs-page/drugs-page.component';
 import { DrugsFormPageComponent } from './drugs-form-page/drugs-form-page.component';
 import { DrugService } from './drug.service';
 import { StorePageComponent } from './store-page/store-page.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     DrugsPageComponent,

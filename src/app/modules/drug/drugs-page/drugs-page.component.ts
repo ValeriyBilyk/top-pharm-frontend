@@ -8,7 +8,7 @@ import { DrugService } from '../drug.service';
 })
 export class DrugsPageComponent implements OnInit {
 
-  items = [1, 2, 3, 4, 5, 6, 7, 8];
+  items = [];
 
   constructor(private drugService: DrugService) { }
 
@@ -17,18 +17,18 @@ export class DrugsPageComponent implements OnInit {
   }
 
   getDrugs() {
-    this.drugService.getDrugs({}).subscribe((res) => console.log(res))
+    this.drugService.getDrugs({}).subscribe((res) => this.items = res)
   }
 
-  getPurchaseState(drugId) {
+  getPurchaseState(drug) {
 
-    return this.drugService.hasDrugInPurchases(drugId) ? 'Remove from purchases' : 'Add to purchases';
+    return this.drugService.hasDrugInPurchases(drug) ? 'Remove from purchases' : 'Add to purchases';
   }
 
-  handlePurchaseAction(drugId) {
-    this.drugService.hasDrugInPurchases(drugId)
-      ? this.drugService.removeFromPurchases(drugId)
-      : this.drugService.addToPurchase(drugId);
+  handlePurchaseAction(drug) {
+    this.drugService.hasDrugInPurchases(drug)
+      ? this.drugService.removeFromPurchases(drug)
+      : this.drugService.addToPurchase(drug);
   }
 
 }

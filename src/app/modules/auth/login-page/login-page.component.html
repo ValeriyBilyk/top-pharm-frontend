@@ -1,8 +1,8 @@
 <div class="tp-form-register-wrapper">
-  <form class="tp-form-register">
+  <form class="tp-form-register" [formGroup]="form" (ngSubmit)="onSubmit()">
     <h2 class="d-flex justify-content-center mt-4">Log in</h2>
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
+    <input type="email" formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Password">
     <input class="tp-input-submit" type="submit" title="Log in" value="Log in">
   </form>
 </div>

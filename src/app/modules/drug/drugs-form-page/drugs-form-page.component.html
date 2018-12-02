@@ -1,10 +1,14 @@
 <div class="tp-form-register-wrapper">
-  <form class="tp-form-register">
+  <form class="tp-form-register" [formGroup]="form" (ngSubmit)="onSubmit()">
     <h2 class="d-flex justify-content-center mt-4">Drugs form</h2>
-    <input type="text" placeholder="Name">
-    <input type="text" placeholder="Price">
-    <input type="text" placeholder="Description">
+    <input type="text" placeholder="Name" formControlName="name">
+    <input type="text" placeholder="Price" formControlName="price">
+    <select class="tp-dropdown" formControlName="type">
+      <option [selected]="true">Choose type</option>
+      <option>Ordinary</option>
+      <option>Narcological</option>
+    </select>
+    <input type="text" placeholder="Amount" formControlName="amount">
     <input class="tp-input-submit" type="submit" value="Apply">
   </form>
 </div>
-

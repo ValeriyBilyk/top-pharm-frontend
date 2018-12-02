@@ -1,27 +1,41 @@
+<div class="tp-modal" [ngClass]="{'show': activeModal && activeModal.showModal }">
+  <div *ngIf="activeModal">
+    <div style="background: #ffffff;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="pl-2">{{activeModal.title}}</div>
+        <div class="p-2">
+          <label>{{activeModal.item.name}}</label>
+          <input type="number" [(ngModel)]="increaseInput" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="d-flex justify-content-end">
+          <button (click)="closeModal()">Close</button>
+          <button type="submit">Apply</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <div class="container">
   <button class="ml-2 mt-4 tp-input-submit tp-input-btn" (click)="navigateToDrugsForm()">Add drug</button>
   <table class="tp-users-table mt-4" border="1">
     <tr>
-      <th class="p-3">First name</th>
-      <th class="p-3">Last name</th>
-      <th class="p-3">Phone number</th>
-      <th class="p-3">Email</th>
+      <th class="p-3">Name</th>
+      <th class="p-3">Price uah</th>
+      <th class="p-3">Type</th>
+      <th class="p-3">Amount</th>
       <th class="p-3">Actions</th>
     </tr>
-    <tr *ngFor="let i of items">
-      <td class="p-3">Ivan</td>
-      <td class="p-3">Ivanov</td>
-      <td class="p-3">+380863994567</td>
-      <td class="p-3">ivan@gmail.com</td>
+    <tr *ngFor="let item of items">
+      <td class="p-3">{{item.name}}</td>
+      <td class="p-3">{{item.price}}</td>
+      <td class="p-3">{{item.type}}</td>
+      <td class="p-3">{{item.amount}}</td>
       <td class="p-3">
         <i class="fa fa-pencil tp-table-action" aria-hidden="true"></i>
         <i class="fa fa-trash-o tp-table-action ml-2" aria-hidden="true"></i>
+        <i class="fa fa-plus tp-table-action ml-2 fa-lg" aria-hidden="true" (click)="addDrugs(item)"></i>
+        <i class="fa fa-minus tp-table-action ml-2 fa-lg" aria-hidden="true" (click)="removeDrugs(item)"></i>
       </td>
     </tr>
   </table>
-  <!--<div *ngFor="let i of items" class="tp-list-item p-2 mt-4">-->
-  <!--<div>Ivan Ivanov</div>-->
-  <!--<div>+380863994567</div>-->
-  <!--<div>ivan@gmail.com</div>-->
-  <!--</div>-->
 </div>

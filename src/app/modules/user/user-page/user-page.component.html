@@ -1,17 +1,13 @@
 <div class="container">
   <table class="tp-users-table mt-4" border="1">
     <tr>
-      <th class="p-3">First name</th>
-      <th class="p-3">Last name</th>
-      <th class="p-3">Phone number</th>
       <th class="p-3">Email</th>
-      <th class="p-3">Actions</th>
+      <th class="p-3">Created At</th>
+      <th class="p-3"></th>
     </tr>
-    <tr *ngFor="let i of items">
-      <td class="p-3">Ivan</td>
-      <td class="p-3">Ivanov</td>
-      <td class="p-3">+380863994567</td>
-      <td class="p-3">ivan@gmail.com</td>
+    <tr *ngFor="let item of items">
+      <td class="p-3">{{item.email}}</td>
+      <td class="p-3">{{item.createdAt}}</td>
       <td class="p-3">
         <i class="fa fa-pencil tp-table-action" aria-hidden="true"></i>
         <i class="fa fa-trash-o tp-table-action ml-2" aria-hidden="true"></i>

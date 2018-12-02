@@ -30,9 +30,17 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/store'])
   }
 
+  navigateToOrderFormPage() {
+    this.router.navigate(['/drugAction-form'])
+  }
+
+  navigateToHistoryPage() {
+    this.router.navigate(['/history'])
+  }
+
   getSelectedDrugsAmount() {
 
-   return this.drugService.selectedDrugsIds && this.drugService.selectedDrugsIds.length;
+   return this.drugService.selectedDrugs && this.drugService.selectedDrugs.length;
   }
 
 }
